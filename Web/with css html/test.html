@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Story</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+        $( ()  => {
+            $("#b1").click( (e) => {
+                $("#id1").toggle('slow', () => {
+                    var test = $(e.currentTarget).css('display');
+                })
+            });
+        });
+        $( ()  => {
+            $("#b2").click( (e) => {
+                $("#id2").toggle('slow', () => {
+                    var test = $(e.currentTarget).css('display');
+                })
+            });
+        });
+        $( ()  => {
+            $("#b3").click( (e) => {
+                $("#id3").toggle('slow', () => {
+                    var test = $(e.currentTarget).css('display');
+                })
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <p> My Story <br>
+                <span class="span1">Theerayut Charoensuksomboon <br> <span class="span2">5935512044</span></span>
+            </p>
+            <a href="https://www.google.com/" target="blank"><img src="google.png" width="120" ></a>
+        </header> 
+
+        <section class="dtable">
+            <article>
+                <h1>Table data</h1>
+                <table>
+                    <tr>
+                        <th>My Nickname</th>
+                        <th>My Birthday</th>
+                        <th>My Favorite Subject</th>
+                    </tr>
+                    <tr id="id1">
+                        <td>Benz</td>
+                        <td>10/08/2540</td>
+                        <td>Distributed Computer</td>
+                    </tr>
+                    <tr id="id2">
+                        <td>Jook</td>
+                        <td>20/02/2540</td>
+                        <td>Mathematic</td>
+                    </tr>
+                    <tr id="id3">
+                        <td>Adum</td>
+                        <td>12/12/2540</td>
+                        <td>Computer Programing Fundamental</td>
+                    </tr>
+                </table>
+                <button id="b1"> Hide/Show R1 </button>
+                <button id="b2"> Hide/Show R2 </button>
+                <button id="b3"> Hide/Show R3 </button>
+            </article>
+            <article class="list">
+                <h3>Top list Music</h3>
+                <ol >
+                    <li><a href="https://www.youtube.com/watch?v=aJOTlE1K90k">Maroon 5 - Girls Like You ft. Cardi B</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=fwK7ggA3-bU">Maroon 5 - One More Night</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=pMSYc52OOns">ActArt - นอกจากชื่อฉัน</a></li> 
+                </ol>
+            </article>
+            <article class="food">
+                <h3>Favorite Food</h3>
+                <ul>
+                    <li>ข้าวผัดรวมทะเล</li>
+                    <img src="rice.jpg" alt="This is ข้าวผัดรวมทะเล" width="50%">
+                    <li>ข้าวกระเพราหมูกรอบ</li>
+                    <img src="moo.jpg" alt="This is ข้าวกระเพราหมูกรอบ" width="50%">
+                    <li>ส้มตำ-ไก่ย่าง</li> 
+                    <img src="som.jpg" alt="This is ส้มตำ-ไก่ย่าง" width="50%">
+                </ul>
+            </article>
+        </section>
+        <section class="center">   
+                <h1>JQuery & JavaScript</h1>    
+            </section>
+            
+            <section class="allcen">
+                <article class="art1">
+                    <div id="demo1">Hello..</div>
+                    <button class="bt1" onclick="changeClick()">Change</button>
+                    <button class="bt2" onclick="returnWord()">Unchange</button><br>
+                </article>
+                <article class="art2">
+                    <input type="text" id="num1" onfocus="this.value=''"> <span id="add">operand</span>
+                    <input type="text" id="num2" onfocus="this.value=''"> <br>
+                    <button class="bt3" onclick="opeRand('Sum')">Sum</button>
+                    <button class="bt4" onclick="opeRand('Min')">Min</button>
+                    <button class="bt5" onclick="opeRand('Mul')">Mul</button>
+                    <button class="bt6" onclick="opeRand('Div')">Div</button>
+                </article>
+            </section>
+    
+        <footer class="footer">
+            <p>Copyright &copy; 2019 Theerayut0044.</p>
+        </footer>
+
+        <script>
+            opeRand = (ops) => {
+                var a = document.getElementById("num1").value;
+                var b = document.getElementById("num2").value;
+                var sum = 0;
+                if (ops == "Sum")
+                    {
+                        sum = Number(a)+Number(b);
+                        document.getElementById("add").innerHTML="+";
+                        alert('Answer: ' +sum);
+                    }
+                else if (ops == "Min")
+                    {
+                        sum = Number(a)-Number(b);
+                        document.getElementById("add").innerHTML="-";
+                        alert('Answer: ' +sum); 
+                    }
+                else if (ops == "Mul")
+                    {
+                        sum = Number(a)*Number(b);
+                        document.getElementById("add").innerHTML="x";
+                        alert('Answer: ' +sum);
+                    }
+                else if (ops == "Div")
+                    {
+                        sum = Number(a)/Number(b);
+                        document.getElementById("add").innerHTML="/";
+                        alert('Answer: ' +sum);
+                    }
+                }
+            changeClick = () => {
+                    document.getElementById("demo1").innerHTML="World";
+                }
+            returnWord = () => {
+                    document.getElementById("demo1").innerHTML="Hello..";
+                }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login {
+    background-color: lightseagreen;
+    margin-top: 50px;
+    text-align: center;
+}
+.login h1{
+    color: aliceblue;
+    font-size: 100px;
+    margin-bottom: 50px;
+    text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.login input {
+    width: 350px;
+    height: 40px;
+    margin: 10px;
+    padding: 0 10px;
+    border: none;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.login button {
+    font-size: 30px;
+    background-color: rgb(255, 57, 57);
+    color: white;
+    width: 120px;
+    height: 45px;
+    margin-top: 30px;
+    border-radius: 5px; 
+    border: none;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.login button:hover {
+    background-color: white;
+    color: black;
+}
+
+.admin {
+    background-color: lightsalmon;;  
+    margin-top: 50px;
+    text-align: center;
+}
+.admin h1 {
+    color: white;
+    font-size: 100px;
+    margin-bottom: 100px;
+    text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.admin a {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(255, 57, 57);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.admin a:hover {
+    background-color: white;
+    color: black;
+}
+
+.logout {
+    background-color: lightgreen;;  
+    margin-top: 50px;
+    text-align: center;
+}
+.logout h1 {
+    color: black;
+    font-size: 80px;
+    margin-bottom: 100px;
+    text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.logout a {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(255, 57, 57);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.logout a:hover {
+    background-color: white;
+    color: black;
+}
+
+.notpass {
+    margin-top: 50px;
+    text-align: center;
+}
+.notpass a {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(255, 57, 57);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+}

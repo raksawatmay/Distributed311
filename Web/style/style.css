@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: antiquewhite;
+}
+
+.header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.header p {
+    text-align: center;
+    font-size: 90px;
+    font-weight: bolder;
+    padding: 60px;
+    margin-bottom: 60px; 
+    background-color: #FDC168;
+    color: #342309;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2) 
+}
+.span1 {
+    font-size: 45px;
+    color:#975B02;
+}
+.span2 {
+    font-size: 35px;
+    color: #706451;
+}
+
+.dtable {
+    margin-bottom: 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+.dtable h1 {
+    margin-bottom: 40px;
+}
+table {
+    border: 2px solid black; 
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+tr, th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+th {
+    font-size: 20px;
+    background-color: tomato;
+}
+tr, td {
+    background-color: lightgoldenrodyellow;
+}
+tr td:hover {
+    color:#FB9902;
+    background-color: #342309;
+}
+
+.list {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.list h3, .food h3{
+    margin-bottom: 30px;
+}
+.list li, .food li{
+    margin: 15px;
+}
+.list a {
+    text-decoration: unset;
+}
+.list a:hover{
+    color: brown;
+}
+
+.food {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    padding: 60px;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #FB9902;
+    background-color: #342309;   
+}
+
+.center {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin: 80px 80px 0px 80px;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.5);
+}
+.center h1 {
+    padding: 50px;
+    background-color: lightslategrey;
+}
+.art1 {
+    margin-bottom: 60px;
+}
+.allcen {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
+#demo1, .allcen h1 {
+    font-size: 100px;
+}
+.art1 button {
+    width: 120px;
+    height: 50px;
+    margin-top: 40px;
+    margin: 20px;
+    font-weight: bolder;
+    border-radius: 40px;
+}
+.bt1 {
+    text-align: center;
+    color: #000;
+    background-color: #FDC168;
+}
+.bt1:hover {
+    background-color: lightcoral;
+}
+.bt2 {
+    background-color: lightseagreen;
+}
+.bt2:hover {
+    background-color: rgb(195, 228, 9);
+}
+.art2 button {
+    width: 80px;
+    height: 40px;
+    margin: 10px 10px 60px;
+    font-weight: bolder;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+.bt3:hover, .bt4:hover, .bt5:hover, .bt6:hover {
+    background-color:saddlebrown;
+    color: white;
+}
+input {
+    padding: 0 5px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+#add {
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.dtable button {
+    width: 120px;
+    height: 35px;
+    margin: 30px 10px 60px;
+    font-weight: bolder;
+    border-radius: 4px;
+    border: 0.2px solid rgba(0,0,0,0.3);
+}
+#b1:hover, #b2:hover, #b3:hover {
+    background-color:darkred;
+    color: white;  
+}

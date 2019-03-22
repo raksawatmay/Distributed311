@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Admin</title>
+  </head>
+  <body class="logout">
+    <header>
+    <h1> 
+      <% system.forEach((system) => { %>
+      <%= system.title%> 
+      <% }); %> 
+    </h1> 
+    <a href="/logout">Logout</a>
+  </header>
+  </body>
+</html>

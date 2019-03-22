@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightseagreen;
+}
+.change {
+    text-align: center;
+}
+.change h1{
+    color: aliceblue;
+    font-size: 50px;
+    padding: 20PX;
+    margin: 40px 20px 40px 20px;
+    background-color: lightseagreen;
+    box-shadow: 3px 6px 10px rgb(0, 0, 0, 0.3)
+}
+.add input {
+    margin: 20px;
+    padding: 0 5px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.2);
+    background-color: aliceblue;
+}
+.add button {
+    margin: 20px;
+    height: 30px;
+    width: 60px;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.2);
+}
+.add button:hover {
+    background-color: lightslategray;
+    color: white;
+}
+.list1 ul li{
+    background-color: azure;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.3);
+}
+img {
+    margin-top: 30px; 
+    margin-bottom: 50px;
+}
+.list2 ul li{
+    background-color: lightsalmon;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    width: 20%;
+}
+.list2 li:hover {
+    background-color: antiquewhite;
+}
