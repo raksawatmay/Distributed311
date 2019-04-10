@@ -1,0 +1,30 @@
+* {
+    background-color: lightsalmon;
+  }
+  .button-color {
+    font-weight: bold;
+    background-color: antiquewhite;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px 15px;
+    margin-left: 10px;
+  }
+  .button-color:hover {
+    background-color: gray;
+    color: white;
+  }
+  .App {
+    color: white;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  input {
+      background-color: aliceblue;
+  }

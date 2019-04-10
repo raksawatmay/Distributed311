@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Admin</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif; background-color: coral;">
+    <header style="text-align:center;">
+
+    <h2 style="color: white; 
+    font-size: 80px;
+    font-weight: bold;
+    margin-top:50px;
+    margin-bottom:50px;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;">PSU Passport Authentication (SOAP) </h2>
+
+
+    <p style=" color: white; 
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: rgb(207, 43, 43);
+    margin-bottom: 30px;"
+    href="http://aashwin.com/index.php/education/library/"
+    onmouseover="this.style.background='rgb(243, 63, 63)'"
+    onmouseout="this.style.background='rgb(207, 43, 43)'"> 
+      <% system.forEach((system) => { %>
+      <%= system.title%>
+      <% }); %> 
+    </p>
+
+    <p style=" color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color:rgb(11, 196, 26);
+    margin-bottom: 30px;"
+    onmouseover="this.style.background='rgb(59, 155, 67)'"
+    onmouseout="this.style.background='rgb(11, 196, 26)'">
+        <% system.forEach((system) => { %>
+        <%= system.code%>
+        <% }); %>  
+    </p>
+
+    <p style=" color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color:midnightblue;
+    margin-bottom: 30px;"
+    onmouseover="this.style.background='rgb(39, 103, 177)'"
+    onmouseout="this.style.background='midnightblue'">
+        <% system.forEach((system) => { %>
+        <%= system.id%>
+        <% }); %>  
+    </p>
+
+  </header>
+  <!-- onmouseover="this.style.background='#0F0'"
+  onmouseout="this.style.background='#00F'" -->
+  </body>
+</html>
+
