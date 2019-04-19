@@ -1,5 +1,5 @@
 * {
-    background-color: lightsalmon;
+    background-color: midnightblue;
   }
   .button-color {
     font-weight: bold;
@@ -18,7 +18,7 @@
     color: white;
   }
   .App {
-    color: white;
+    color: lightskyblue;
     text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -27,4 +27,10 @@
   }
   input {
       background-color: aliceblue;
+  }
+  .todo {
+    text-align: center;
+  }
+  .add {
+    margin-bottom: 20px;
   }
