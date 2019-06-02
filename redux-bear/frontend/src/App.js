@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Bear from "./Bear"
+import Music from "./Music"
 import {Provider} from 'react-redux'
 import logger from 'redux-logger'
 import {createStore, combineReducers, applyMiddleware} from 'redux'
@@ -9,92 +9,85 @@ import thunk from 'redux-thunk'
 
 
 
-export const getBearsSuccess = bears => ({
-    type: 'GET_BEARS_SUCCESS',
-    bears
+export const getMusicsSuccess = musics => ({
+    type: 'GET_MUSICS_SUCCESS',
+    musics
 });
-export const getBearsFailed = () => ({ type: 'GET_BEARS_FAILED'});
+export const getMusicsFailed = () => ({ type: 'GET_MUSICS_FAILED'});
 
-export const getBears = () => async (dispatch) => {
+export const getMusics = () => async (dispatch) => {
     try {
-        console.log('get bear new')
-        const response = await axios.get(`http://localhost:3001/api/bears`)
+        const response = await axios.get(`http://localhost:8000/api/musics`)
         const responseBody = await response.data;
         console.log('response: ', responseBody)
-        dispatch(getBearsSuccess(responseBody));
+        dispatch(getMusicsSuccess(responseBody));
     } catch (error) {
         console.error(error);
-        dispatch(getBearsFailed());
+        dispatch(getMusicsFailed());
     }
 }
 
 //----------------------------------------------
 
-export const findBear = (bear_id) => async (dispatch) => {
+export const findMusic = (music_id) => async (dispatch) => {
     try {
-        console.log('find bear :',bear_id)
-
-        const response = await axios.get(`http://localhost:3001/api/bears/${bear_id}`)
+        const response = await axios.get(`http://localhost:8000/api/musics/${music_id}`)
         const responseBody = await response.data;
         console.log('response: ', responseBody)
-        dispatch(getBearsSuccess(responseBody));
+        dispatch(getMusicsSuccess(responseBody));
     }catch (err){
         console.error(err);
-        dispatch(getBearsFailed());
+        dispatch(getMusicsFailed());
     }
 }
 
-export const addBear = (bear) => async (dispatch) => {
+export const addMusic = (music) => async (dispatch) => {
     try{
-        console.log('add bear :',bear)
 
-        const response = await axios.post(`http://localhost:3001/api/bears`,  bear )
+        const response = await axios.post(`http://localhost:8000/api/musics`,music )
         const responseBody = await response.data;
         console.log('response: ', responseBody)
-        dispatch(getBearsSuccess(responseBody));
+        dispatch(getMusicsSuccess(responseBody));
     }catch(err){
         console.error(err);
-        dispatch(getBearsFailed());
+        dispatch(getMusicsFailed());
     }
 
 }
-export const updateBear = (bear) => async (dispatch) => {
+export const updateMusic = (music) => async (dispatch) => {
     try{
-        console.log('update bear :',bear)
 
-        const response = await axios.put(`http://localhost:3001/api/bears/${bear.bear_id}`,  bear )
+        const response = await axios.put(`http://localhost:8000/api/musics/${music.music_id}`,  music )
         const responseBody = await response.data;
         console.log('response: ', responseBody)
-        dispatch(getBearsSuccess(responseBody));
+        dispatch(getMusicsSuccess(responseBody));
     }catch(err){
         console.error(err);
-        dispatch(getBearsFailed());
+        dispatch(getMusicsFailed());
     }
 
 }
-export const deleteBear = (bear_id) => async (dispatch) => {
+export const deleteMusic = (music_id) => async (dispatch) => {
     try {
-        console.log('delete bear :',bear_id)
-
-        const response = await axios.delete(`http://localhost:3001/api/bears/${bear_id}`)
+        const response = await axios.delete(`http://localhost:8000/api/musics/${music_id}`)
         const responseBody = await response.data;
         console.log('response: ', responseBody)
-        dispatch(getBearsSuccess(responseBody));
+        dispatch(getMusicsSuccess(responseBody));
     }catch (err){
         console.error(err);
-        dispatch(getBearsFailed());
+        dispatch(getMusicsFailed());
     }
 }
 
 
-export const bearReducer = (state = 0, action) => {
+export const musicReducer = (state = 0, action) => {
     switch (action.type) {
-        case 'GET_BEARS_SUCCESS':
-            console.log('action: ' , action.bears)
-            return action.bears
-        case 'GET_BEARS_FAILED':
+        case 'GET_MUSICS_SUCCESS':
+            console.log('action: ' , action.musics)
+            return action.MUSICS
+        case 'GET_MUSICS_FAILED':
             console.log('action: Failed')
-            return action.bears
+            return action.music
         default:
             return state
     }
@@ -102,7 +95,7 @@ export const bearReducer = (state = 0, action) => {
 
 
 const rootReducer = combineReducers( {
-    bearsPass: bearReducer
+    musicsPass: musicReducer
 })
 export const store = createStore(rootReducer, applyMiddleware(logger, thunk))
 
@@ -111,8 +104,8 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-            <div className="page-bear">
-                <Bear />
+            <div>
+                <Music />
             </div>
             </Provider>
         );
